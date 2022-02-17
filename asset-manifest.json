@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/github.io/Wordle_Solver/static/css/main.89b7b07e.css",
-    "main.js": "/github.io/Wordle_Solver/static/js/main.fe48d8c2.js",
-    "index.html": "/github.io/Wordle_Solver/index.html",
-    "main.89b7b07e.css.map": "/github.io/Wordle_Solver/static/css/main.89b7b07e.css.map",
-    "main.fe48d8c2.js.map": "/github.io/Wordle_Solver/static/js/main.fe48d8c2.js.map"
+    "main.css": "/Wordle_Solver/static/css/main.89b7b07e.css",
+    "main.js": "/Wordle_Solver/static/js/main.fe48d8c2.js",
+    "index.html": "/Wordle_Solver/index.html",
+    "main.89b7b07e.css.map": "/Wordle_Solver/static/css/main.89b7b07e.css.map",
+    "main.fe48d8c2.js.map": "/Wordle_Solver/static/js/main.fe48d8c2.js.map"
   },
   "entrypoints": [
     "static/css/main.89b7b07e.css",
