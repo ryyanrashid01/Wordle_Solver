@@ -9,7 +9,7 @@ const App = function () {
   return (
     <div>
       <Nav />
-      <div>
+      <div className="landing-page">
         <Filter updateWordList={setWordList} />
         <WordList wordList={wordList} />
       </div>

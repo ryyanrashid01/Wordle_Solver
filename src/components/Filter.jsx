@@ -95,9 +95,16 @@ const Filter = function ({ updateWordList }) {
 
   function deleteGreenLetter(letter) {
     var updatedList = greenLetters.filter((listLetter) => {
-      return listLetter !== letter;
+      if (
+        listLetter.letter === letter.letter &&
+        listLetter.position === letter.position
+      ) {
+        return false;
+      } else {
+        return true;
+      }
     });
-    setYellowLetters(updatedList);
+    setGreenLetters(updatedList);
   }
 
   function filterWords() {
