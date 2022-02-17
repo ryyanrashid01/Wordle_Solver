@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fdf2e6;
+  background-image: url("https://www.transparenttextures.com/patterns/rice-paper.png");
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  padding: 4rem 4rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  top: 0;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 4rem;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+
+.logo-letters {
+  color: white;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+}
+
+#logoLetterOne,
+#logoLetterFour {
+  background-color: #3a3a3c;
+}
+
+#logoLetterTwo {
+  background-color: #6aa964;
+}
+
+#logoLetterThree,
+#logoLetterFive,
+#logoLetterSix {
+  background-color: #c8b356;
+}
+
+.solver-color {
+  background-color: #6aa964 !important;
+}
+
+.github {
+  outline: black solid 3px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease all;
+}
+
+.github i {
+  margin-right: 10px;
+}
+
+.github:hover {
+  background-color: wheat;
+}
+
+/* Filter Section */
+.filter {
+  height: 90vh;
+  position: fixed;
+  top: 8vh;
+  left: 0;
+  width: 30%;
+  text-align: center;
+}
+
+.filter button {
+  background-color: #00ab66;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 18px;
+  width: 70px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.filter button:hover {
+  background-color: #0f5cad;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 2px;
+}
+
+.input-section {
+  text-align: center;
+}
+
+.input-section h4 {
+  margin: 2rem 0;
+}
+
+.input-section input,
+.input-section button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.input-section input {
+  font-size: 20px;
+  text-align: center;
+}
+
+.input-section button {
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.input-section button:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 2px;
+  background-color: #f0f0f0;
+}
+
+.input-section button i {
+  color: white;
+  font-size: 20px;
+}
+
+.black-letter-list,
+.yellow-letter-list,
+.green-letter-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Black Section */
+.black-section button {
+  background-color: #3a3a3c;
+}
+
+.black-section button:hover > i {
+  color: #3a3a3c;
+}
+
+.black-section button {
+  background-color: #3a3a3c;
+}
+
+.black-section button:hover > i {
+  color: #3a3a3c;
+}
+
+.black-letter {
+  background-color: #3a3a3c;
+  color: white;
+}
+
+/* Yellow and Green Section Commons */
+
+.yellow-section input,
+.green-section input {
+  margin: 0;
+}
+
+.yellow-section input,
+.green-section input {
+  margin: 0;
+}
+
+/* Yellow Section */
+
+.yellow-section button {
+  background-color: #c8b356;
+}
+
+.yellow-section button:hover > i {
+  color: #c8b356;
+}
+
+.yellow-section button {
+  background-color: #c8b356;
+}
+
+.yellow-section button:hover > i {
+  color: #c8b356;
+}
+
+.yellow-letter {
+  background-color: #c8b356;
+  color: white;
+}
+
+/* Green Section */
+
+.green-section button {
+  background-color: #6aa964;
+}
+
+.green-section button:hover > i {
+  color: #00ab66;
+}
+
+.green-section button {
+  background-color: #6aa964;
+}
+
+.green-section button:hover > i {
+  color: #00ab66;
+}
+
+.green-letter {
+  background-color: #6aa964;
+  color: white;
+}
+
+/* Word Display Section */
+
+.words {
+  margin-left: 30%;
+  margin-top: 4rem;
+}
+
+.word-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 10px rgba(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Letter Styling */
+.letter {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease all;
+}
+
+.letter-index {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  transition: 0.3s ease all;
+}
+
+.delete {
+  position: absolute;
+  display: none;
+}
+
+.delete i {
+  color: red;
+}
+
+.letter:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.letter:hover > .delete {
+  display: block;
+}
+
+.letter-index:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.letter-index:hover > .delete {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 2rem 4rem;
+  }
+  .navbar {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .logo-letters {
+    width: 40px;
+    height: 40px;
+  }
+  .github {
+    display: none;
+  }
+  .filter {
+    height: fit-content;
+    margin-top: 4rem;
+    position: static;
+    width: 100%;
+  }
+  .words {
+    margin: 0;
+  }
+}
