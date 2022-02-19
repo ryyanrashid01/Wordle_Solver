@@ -10,7 +10,7 @@ const WordList = function ({ wordList }) {
   return (
     <div className="container words">
       <h4>
-        {wordList.length == 0 ? div_zero : wordList.length + " words found."}
+        {wordList.length == 0 ? div_zero : wordList.length + " word(s) found."}
       </h4>
       <br />
       <div className="word-list">

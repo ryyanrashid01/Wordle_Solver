@@ -246,6 +246,16 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
+/* Word List Select Section */
+
+.word-list-select {
+  margin: 2rem 0;
+}
+
+.word-list-select input {
+  margin-right: 1rem;
+}
+
 /* Word Display Section */
 
 .words {

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import BlackLetters from "./BlackLetters";
 import YellowLetters from "./YellowLetters";
 import GreenLetters from "./GreenLetters";
+import WordListSelect from "./WordListSelect";
 import wordleList from "./WordleList";
+import allWords from "./AllWords";
 
 const Filter = function ({ updateWordList }) {
   const [blackLetters, setBlackLetters] = useState([]);
@@ -108,7 +110,9 @@ const Filter = function ({ updateWordList }) {
   }
 
   function filterWords() {
-    var modifiedList = wordleList.slice();
+    let isChecked = document.getElementById("wordListSelect").checked;
+    var modifiedList =
+      isChecked === true ? allWords.slice() : wordleList.slice();
     // Filter according black letters
     for (var i = 0; i < modifiedList.length; i++) {
       for (var j = 0; j < blackLetters.length; j++) {
@@ -180,7 +184,7 @@ const Filter = function ({ updateWordList }) {
         deleteLetter={deleteGreenLetter}
         greenLetters={greenLetters}
       />
-      <br />
+      <WordListSelect />
       <button onClick={filterWords}>Find</button>
     </div>
   );

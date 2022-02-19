@@ -1,4 +1,4 @@
-var wordleList = [
+const wordleList = [
   "cigar",
   "rebut",
   "sissy",
