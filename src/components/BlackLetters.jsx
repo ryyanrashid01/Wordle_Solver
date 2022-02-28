@@ -5,7 +5,7 @@ import AddLetter from "./AddLetter";
 const BlackWords = function ({ addLetter, deleteLetter, blackLetters }) {
   return (
     <div className="input-section black-section">
-      <h4 style={{ marginTop: "0" }}>Black Words</h4>
+      <h4 style={{ marginTop: "0" }}>Black Letters</h4>
       <div className="black-letter-list">
         {blackLetters.map((letter, index) => {
           return (

@@ -126,9 +126,6 @@ const Filter = function ({ updateWordList }) {
     // Filter according to green letters
     for (let i = 0; i < modifiedList.length; i++) {
       for (var j = 0; j < greenLetters.length; j++) {
-        console.log(
-          modifiedList[i].includes(greenLetters[j].letter.toLowerCase())
-        );
         if (modifiedList[i].includes(greenLetters[j].letter.toLowerCase())) {
           if (
             modifiedList[i][greenLetters[j].position - 1] !==

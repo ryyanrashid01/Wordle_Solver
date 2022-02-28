@@ -5,7 +5,7 @@ import LetterIndex from "./LetterIndex";
 const YellowWords = function ({ addLetter, deleteLetter, yellowLetters }) {
   return (
     <div className="input-section yellow-section">
-      <h4>Yellow Words</h4>
+      <h4>Yellow Letters</h4>
       <div className="yellow-letter-list">
         {yellowLetters.map((letter, index) => {
           return (
