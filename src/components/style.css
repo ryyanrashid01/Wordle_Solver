@@ -117,7 +117,7 @@ input::-webkit-inner-spin-button {
 
 .theme-icon {
   position: absolute;
-  right: 0;
+  right: 2.5rem;
   cursor: pointer;
 }
 

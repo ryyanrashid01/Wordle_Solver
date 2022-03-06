@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Theme = function () {
   const time = new Date().getHours();
   let icon = "";
-  time > 6 && time < 19 ? (icon = "moon") : (icon = "sun");
+  time > 5 && time < 19 ? (icon = "moon") : (icon = "sun");
   const [selectedIcon, setIcon] = useState(icon);
   function handleClick() {
     document.body.classList.toggle("dark-theme");
