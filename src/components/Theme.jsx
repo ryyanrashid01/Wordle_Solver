@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Theme = function () {
   const time = new Date().getHours();
-  let icon = "";
-  time > 5 && time < 19 ? (icon = "moon") : (icon = "sun");
-  const [selectedIcon, setIcon] = useState(icon);
+  const [selectedIcon, setIcon] = useState("moon");
+  useEffect(() => {
+    if (time > 6 && time < 19) {
+      setIcon("moon");
+      document.body.classList.remove("dark-theme");
+    } else {
+      setIcon("sun");
+      document.body.classList.add("dark-theme");
+    }
+  }, []);
   function handleClick() {
     document.body.classList.toggle("dark-theme");
     setIcon((prevIcon) => {
