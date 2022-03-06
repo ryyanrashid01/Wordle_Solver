@@ -3,6 +3,7 @@ import BlackLetters from "./BlackLetters";
 import YellowLetters from "./YellowLetters";
 import GreenLetters from "./GreenLetters";
 import WordListSelect from "./WordListSelect";
+import Theme from "./Theme";
 import wordleList from "./WordleList";
 import allWords from "./AllWords";
 
@@ -125,7 +126,7 @@ const Filter = function ({ updateWordList }) {
     }
     // Filter according to green letters
     for (let i = 0; i < modifiedList.length; i++) {
-      for (var j = 0; j < greenLetters.length; j++) {
+      for (j = 0; j < greenLetters.length; j++) {
         if (modifiedList[i].includes(greenLetters[j].letter.toLowerCase())) {
           if (
             modifiedList[i][greenLetters[j].position - 1] !==
@@ -144,7 +145,7 @@ const Filter = function ({ updateWordList }) {
     }
     // Filter according to yellow letters
     for (let i = 0; i < modifiedList.length; i++) {
-      for (var j = 0; j < yellowLetters.length; j++) {
+      for (j = 0; j < yellowLetters.length; j++) {
         if (modifiedList[i].includes(yellowLetters[j].letter.toLowerCase())) {
           if (
             modifiedList[i][yellowLetters[j].position - 1] ===
@@ -166,6 +167,7 @@ const Filter = function ({ updateWordList }) {
 
   return (
     <div className="filter container">
+      <Theme />
       <BlackLetters
         addLetter={addBlackLetter}
         deleteLetter={deleteBlackLetter}

@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const AddLetter = function ({ addLetter }) {
   const [letterInput, setLetterInput] = useState("");
+  const inputLetterRef = useRef(null);
+
+  useEffect(() => {
+    inputLetterRef.current && inputLetterRef.current.focus();
+  }, []);
 
   const handleChange = (event) => {
     setLetterInput(event.target.value);
@@ -22,6 +27,7 @@ const AddLetter = function ({ addLetter }) {
         onChange={handleChange}
         maxLength="1"
         placeholder="A"
+        ref={inputLetterRef}
       />
       <button type="submit">
         <i className="fa-solid fa-plus"></i>

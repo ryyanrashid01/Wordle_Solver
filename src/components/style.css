@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+/* Variables */
+:root {
+  --body-color: #e4f9f5;
+  --black-letters: #3a3a3c;
+  --green-letters: #6aa964;
+  --yellow-letters: #c8b356;
+  --body-color-alt: #30e3ca;
+  --text-color: #40514e;
+  --text-color-alt: #11999e;
+  --white: #ffffff;
+  --black: #212121;
+  --red: #ff0f0f;
+}
+
+body.dark-theme {
+  --body-color: #2c3332;
+  --text-color: #e3fdfd;
+  --white: #212121;
+  --black: #ffffff;
+}
+
 /* Common */
 * {
   margin: 0;
@@ -9,8 +30,8 @@
 }
 
 body {
-  background-color: #fdf2e6;
-  background-image: url("https://www.transparenttextures.com/patterns/rice-paper.png");
+  background-color: var(--body-color);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 input::-webkit-outer-spin-button,
@@ -40,7 +61,6 @@ input::-webkit-inner-spin-button {
   font-size: 25px;
   font-weight: 600px;
   text-decoration: none;
-  color: black;
   display: flex;
 }
 
@@ -57,30 +77,30 @@ input::-webkit-inner-spin-button {
 
 #logoLetterOne,
 #logoLetterFour {
-  background-color: #3a3a3c;
+  background-color: var(--black-letters);
 }
 
 #logoLetterTwo {
-  background-color: #6aa964;
+  background-color: var(--green-letters);
 }
 
 #logoLetterThree,
 #logoLetterFive,
 #logoLetterSix {
-  background-color: #c8b356;
+  background-color: var(--yellow-letters);
 }
 
 .solver-color {
-  background-color: #6aa964 !important;
+  background-color: var(--green-letters) !important;
 }
 
 .github {
-  outline: black solid 3px;
+  outline: var(--black) solid 2px;
   border-radius: 5px;
   padding: 5px 10px;
-  background-color: white;
+  background-color: var(--white);
   text-decoration: none;
-  color: black;
+  color: var(--black);
   transition: 0.3s ease all;
 }
 
@@ -89,7 +109,16 @@ input::-webkit-inner-spin-button {
 }
 
 .github:hover {
-  background-color: wheat;
+  background-color: var(--text-color);
+  color: var(--body-color);
+}
+
+/* Theme icon */
+
+.theme-icon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 /* Filter Section */
@@ -101,13 +130,15 @@ input::-webkit-inner-spin-button {
   width: 30%;
   text-align: center;
   overflow-y: scroll;
+  color: var(--text-color);
 }
 
 .filter button {
-  background-color: #00ab66;
-  color: white;
-  border: none;
+  background-color: var(--white);
+  color: var(--text-color);
   border-radius: 5px;
+  border: none;
+  outline: var(--black) 2px solid;
   height: 40px;
   font-size: 18px;
   width: 70px;
@@ -116,8 +147,8 @@ input::-webkit-inner-spin-button {
 }
 
 .filter button:hover {
-  background-color: #0f5cad;
-  box-shadow: rgba(0, 0, 0, 0.5) 3px 2px;
+  background-color: var(--text-color);
+  color: var(--body-color);
 }
 
 .input-section {
@@ -143,12 +174,13 @@ input::-webkit-inner-spin-button {
 .input-section button {
   border: none;
   cursor: pointer;
+  border-radius: 0;
   transition: 0.3s all ease;
+  outline: none;
 }
 
 .input-section button:hover {
-  box-shadow: rgba(0, 0, 0, 0.5) 3px 2px;
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
 .input-section button i {
@@ -168,23 +200,27 @@ input::-webkit-inner-spin-button {
 
 /* Black Section */
 .black-section button {
-  background-color: #3a3a3c;
+  background-color: var(--black-letters);
+}
+
+.black-section button:hover {
+  outline: var(--black-letters) 2px solid;
 }
 
 .black-section button:hover > i {
-  color: #3a3a3c;
+  color: var(--black-letters);
 }
 
 .black-section button {
-  background-color: #3a3a3c;
+  background-color: var(--black-letters);
 }
 
 .black-section button:hover > i {
-  color: #3a3a3c;
+  color: var(--black-letters);
 }
 
 .black-letter {
-  background-color: #3a3a3c;
+  background-color: var(--black-letters);
   color: white;
 }
 
@@ -203,53 +239,45 @@ input::-webkit-inner-spin-button {
 /* Yellow Section */
 
 .yellow-section button {
-  background-color: #c8b356;
+  background-color: var(--yellow-letters);
+}
+
+.yellow-section button:hover {
+  outline: var(--yellow-letters) 2px solid;
 }
 
 .yellow-section button:hover > i {
-  color: #c8b356;
-}
-
-.yellow-section button {
-  background-color: #c8b356;
-}
-
-.yellow-section button:hover > i {
-  color: #c8b356;
+  color: var(--yellow-letters);
 }
 
 .yellow-letter {
-  background-color: #c8b356;
+  background-color: var(--yellow-letters);
   color: white;
 }
 
 /* Green Section */
 
 .green-section button {
-  background-color: #6aa964;
-}
-
-.green-section button:hover > i {
-  color: #00ab66;
+  background-color: var(--green-letters);
 }
 
 .green-section button {
-  background-color: #6aa964;
+  outline: var(--green-letters) 2px solid;
 }
 
 .green-section button:hover > i {
-  color: #00ab66;
+  color: var(--green-letters);
 }
 
 .green-letter {
-  background-color: #6aa964;
+  background-color: var(--green-letters);
   color: white;
 }
 
 /* Word List Select Section */
 
 .word-list-select {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .word-list-select input {
@@ -261,6 +289,13 @@ input::-webkit-inner-spin-button {
 .words {
   margin-left: 30%;
   margin-top: 4rem;
+  color: var(--text-color);
+}
+
+.instructions {
+  padding: 1rem;
+  font-size: 15px;
+  font-weight: normal;
 }
 
 .word-list {
@@ -273,9 +308,9 @@ input::-webkit-inner-spin-button {
 .card {
   width: 100px;
   height: 40px;
-  background-color: white;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 12px;
   border-radius: 1rem;
-  box-shadow: 2px 3px 10px rgba(128, 128, 128, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -308,12 +343,13 @@ input::-webkit-inner-spin-button {
 }
 
 .delete i {
-  color: red;
+  color: var(--red);
 }
 
 .letter:hover {
   cursor: pointer;
-  background-color: white;
+  background-color: var(--white);
+  outline: var(--text-color) 2px solid;
 }
 
 .letter:hover > .delete {

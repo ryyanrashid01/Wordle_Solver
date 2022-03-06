@@ -57,7 +57,7 @@ const Nav = function () {
       </a>
       <a
         className="github"
-        href="https://github.com/ryyanrashid01/Wordle_Solver"
+        href="https://github.com/ryyanrashid01/wordle_solver"
       >
         <i className="fa-brands fa-github"></i>
         <span className="github-desc">GitHub</span>

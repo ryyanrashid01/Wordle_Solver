@@ -14,10 +14,9 @@ const WordListSelect = function () {
         defaultChecked={check}
       />
       <label htmlFor="wordList">Use all 5 letter words.</label>
-      <p>
+      <p style={{ fontSize: "12px" }}>
         (Default: <b>Wordle List</b>)
       </p>
-      <br />
     </div>
   );
 };
