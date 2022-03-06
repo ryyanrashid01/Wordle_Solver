@@ -292,10 +292,26 @@ input::-webkit-inner-spin-button {
   color: var(--text-color);
 }
 
+.instructions-container {
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(6px);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 15px;
+}
+
 .instructions {
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 15px;
   font-weight: normal;
+}
+
+.instructions li {
+  padding: 1rem;
+}
+
+.instructions li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .word-list {

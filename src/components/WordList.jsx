@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const WordList = function ({ wordList }) {
   var div_zero = (
-    <div>
+    <div className="instructions-container">
       Filters empty or invalid. ZERO words found.
       <ul className="instructions">
         <li className="instruction">
